@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css';
+
 import Table from './components/Table/Table'
 import Form from './components/Form/Form'
 import Popup from './components/Popup/Popup'
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <h1>Nutemployees</h1>
-      <Popup trigger={showCreatePop}>
+      <Popup trigger={showCreatePop} title="Create a naw employee">
         <Form hendleCancel={hendleCancel} selectedEmployee={selectedEmployee?selectedEmployee:''}/>
       </Popup>
       <button onClick={() =>{

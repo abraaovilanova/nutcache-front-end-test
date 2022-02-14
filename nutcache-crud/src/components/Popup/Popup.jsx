@@ -1,9 +1,11 @@
 import React from 'react'
 import './Popup.css'
-export default (props) => {
+
+const Popup = (props) => {
     return (props.trigger ? (
-        <div className='popup'>
-            <div className="popup-inner">
+        <div className='Popup'>
+            <div className="Popup-inner">
+                <h3>{props.title}</h3>
                 {/* <button className="close-btn">Close</button> */}
                 {props.children}
             </div>
@@ -11,3 +13,5 @@ export default (props) => {
     ): ''
     )
 }
+
+export default Popup

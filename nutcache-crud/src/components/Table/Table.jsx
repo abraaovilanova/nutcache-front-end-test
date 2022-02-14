@@ -3,7 +3,7 @@ import axios from 'axios'
 import './Table.css'
 import Popup from '../Popup/Popup'
 
-export default ({ handleEdit }) => {
+const Table =  ({ handleEdit }) => {
     const [nutemployees, setNutemployees] = useState([])
     const [showDeletPopup, setShowDeletPopup] = useState(false)
     const [selectedEmployee, setSelectedEmployee] = useState('')
@@ -32,7 +32,7 @@ export default ({ handleEdit }) => {
 
 
     return (
-        <>
+        <div className="Table">
         <Popup trigger={showDeletPopup}>
             <p>Are you sure you want to delete this employee?</p>
             <div className="btn-group">
@@ -66,6 +66,8 @@ export default ({ handleEdit }) => {
             })}
             </table>
         </div>
-        </>
+        </div>
     )
 }
+
+export default Table

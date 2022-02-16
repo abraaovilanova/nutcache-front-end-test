@@ -7571,6 +7571,11 @@
   dependencies:
     "path-key" "^3.0.0"
 
+"nsw@^0.1.0":
+  "integrity" "sha512-s8hv/E60evZNDFNlUq770SylMgY1yX1ckGgghZ5J/DSGTT8Hml0ngo+liDO17XlmH/ujbBjtJrpw8d1nWbb5EA=="
+  "resolved" "https://registry.npmjs.org/nsw/-/nsw-0.1.0.tgz"
+  "version" "0.1.0"
+
 "nth-check@^1.0.2":
   "integrity" "sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg=="
   "resolved" "https://registry.npmjs.org/nth-check/-/nth-check-1.0.2.tgz"

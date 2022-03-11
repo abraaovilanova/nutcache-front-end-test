@@ -20,6 +20,15 @@ const Table =  ({ handleEdit }) => {
             .catch(err => console.log(err))
         setShowDeletPopup(!showDeletPopup)
     }
+
+    useEffect(()=>{
+        axios.get('http://localhost:3001/employees')
+            .then(res =>{
+                setNutemployees([...res.data.employee])
+            }) 
+            .catch(err => console.log(err))
+    },[])
+
     // Usar método quando for testar os dados completos
     useEffect(()=>{
         axios.get('http://localhost:3001/employees')
@@ -27,7 +36,7 @@ const Table =  ({ handleEdit }) => {
                 setNutemployees([...res.data.employee])
             }) 
             .catch(err => console.log(err))
-    },[setNutemployees, handleEdit, handleDelet])
+    },[handleEdit, handleDelet])
 
 
 
@@ -36,11 +45,11 @@ const Table =  ({ handleEdit }) => {
         <Popup trigger={showDeletPopup}>
             <p>Are you sure you want to delete this employee?</p>
             <div className="btn-group">
-                <button className="confirmation-btn" onClick={(e)=>handleDelet(e)}>Yes!</button>
-                <button className="cancel-btn" onClick={(e)=>setShowDeletPopup(!showDeletPopup)}>No!</button>
+                <button className="confirmation-btn" onClick={(e)=>handleDelet(e)}>Yes</button>
+                <button className="cancel-btn" onClick={(e)=>setShowDeletPopup(!showDeletPopup)}>No</button>
             </div>
-            
         </Popup>
+
         <div>
             <table>
                 <tr>
@@ -50,16 +59,16 @@ const Table =  ({ handleEdit }) => {
                     <th>Team</th>
                     <th>Actions</th>
                 </tr>
-            {nutemployees?.map(employee => {
+            {nutemployees?.map((employee,idx) => {
                 return (
-                    <tr>
+                    <tr key={`${employee}-${idx}`}>
                         <td>{ employee.name }</td>
                         <td>{ employee.email }</td>
                         <td>{ employee.startDate }</td>
                         <td>{ employee.team }</td>
                         <td>
-                            <button onClick={(e)=> handleEdit(employee) }>Edit</button> 
-                            <button onClick={(e)=> handleShowDeletPopup(employee)}>Delete</button>
+                            <button onClick={(e)=> handleEdit(employee) }><i className="fa fa-pencil" aria-hidden="true"></i></button> 
+                            <button onClick={(e)=> handleShowDeletPopup(employee)}><i className="fa fa-trash" aria-hidden="true"></i></button>
                         </td>    
                     </tr>
                 )

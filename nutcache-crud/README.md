@@ -1,2 +1,5 @@
-# Nutcache crud front end test
+# Nutcache crud front
 blá - blá - blá...
+
+# Ferramentas utilizadas
+* React

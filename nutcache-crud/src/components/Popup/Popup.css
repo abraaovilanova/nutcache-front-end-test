@@ -13,10 +13,13 @@
 }
 
 .Popup-inner{
-    position: relative;
-    padding: 32px;
+    overflow: auto;
+    position: absolute;
+    top:3rem;
     width: 50%;
     max-width: 500px;
+    max-height: 500px;
+    padding: 1.5rem;
     background-color: #fff;
 }
 
@@ -24,6 +27,4 @@
     position: absolute;
     top: 16px;
     right: 16px;
-
-
 }

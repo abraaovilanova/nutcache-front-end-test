@@ -36,7 +36,7 @@ const Table =  ({ handleEdit }) => {
                 setNutemployees([...res.data.employee])
             }) 
             .catch(err => console.log(err))
-    },[handleEdit, handleDelet])
+    },[showDeletPopup, handleEdit])
 
 
 

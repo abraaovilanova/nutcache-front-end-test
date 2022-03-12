@@ -13,7 +13,7 @@ function formataCPF(cpf){
 
 const Form = ({ selectedEmployee, hendleCancel }) => {
     const base_url = process.env.REACT_APP_BASE_URL
-    console.log(base_url, 'base url')
+
 
     const [name, setName] = useState(selectedEmployee? selectedEmployee.name : '')
     const [email, setEmail] = useState(selectedEmployee? selectedEmployee.email : '')

@@ -3,7 +3,8 @@ import { rest } from 'msw'
 export const handlers = [
     rest.get("http://localhost:3001/employees", (req, res, ctx) => {
          return res(
-             ctx.json([
+             ctx.json(
+                {employee:[
                 {
                     _id: "620a9aa001fc3630a3735d69",
                     name: "Ana Paula",
@@ -11,7 +12,7 @@ export const handlers = [
                     gender: "female",
                     email: "anapaula@email.com",
                     cpf: "123456789",
-                    startDate: "fev/2022",
+                    startDate: "05/2022",
                     team: "backend",
                     __v: 0
                 },
@@ -22,11 +23,11 @@ export const handlers = [
                     gender: "male",
                     email: "abraao@email.com",
                     cpf: "123456789",
-                    startDate: "mar/2021",
+                    startDate: "03/2021",
                     team: "frontend",
                     __v: 0
-                },
-            ])
+                }
+            ]})
          )
     })
 ]

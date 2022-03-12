@@ -122,7 +122,7 @@ const Form = ({ selectedEmployee, hendleCancel }) => {
 
     return (
         <div className="Form">
-            <form action="">
+            <form role="form" action="">
                 {showAlert ? <p style={{color:'red'}}>Data with * are required</p> : '' }
                 
                 <div className="form-group">
